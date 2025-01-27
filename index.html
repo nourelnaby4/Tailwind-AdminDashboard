@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="./dist/css/output.css" rel="stylesheet">
+  <link href="./dist/css/style.css" rel="stylesheet">
+</head>
+
+<body class="text-gray-800">
+  <!-- slider -->
+  <div class="fixed left-0 top-0 w-64 h-full bg-gray-900 p-4">
+    <a class="flex items-center pb-4 border-b border-gray-600">
+      <img src="https://placehold.co/32x32" class="w-8 h-8 rounded object-cover" alt="">
+      <span class="text-lg font-bold text-white ml-3">LOGO</span>
+    </a>
+    <ul class="mt-4 slider-menu">
+      <li class="mb-2 group active">
+        <a href="#" class="w-full flex items-center py-2 px-4 text-gray-400 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white">
+          <i class="ri-home-2-line text-lg mr-3"></i>
+          <span class="text-sm">Dashbord</span>
+        </a>
+      </li>
+      <li class="mb-1 group">
+        <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md slider-dropdown-toggle">
+          <i class="ri-instance-line text-lg mr-3"></i>
+          <span class="text-sm">Orders</span>
+          <i class="ri-arrow-right-s-line ml-auto arrow"></i>
+        </a>
+        <ul class="overflow-hidden max-h-0 opacity-0 transition-all duration-200 ease-in pl-7 mt-2 slider-dropdown-items">
+          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Active Order</a></li>
+          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Completed Order</a></li>
+          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Canceled Order</a></li>
+        </ul>
+      </li>
+      
+      <li class="mb-1 group">
+        <a href="#" class=" flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md slider-dropdown-toggle">
+          <i class="ri-flashlight-line text-lg mr-3"></i>
+          <span class="text-sm">Services</span>
+          <i class="ri-arrow-right-s-line ml-auto arrow"></i>
+        </a>
+        <ul class="overflow-hidden max-h-0 opacity-0  transition-all duration-200 ease-in pl-7 mt-2 slider-dropdown-items">
+          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Manage Services</a></li>
+        </ul>
+      </li>
+      <li class="mb-1 group">
+        <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md">
+          <i class="ri-settings-2-line text-lg mr-3"></i>
+          <span class="text-sm">Settings</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <script src="./dist/js/script.js"></script>
+</body>
+
+</html>
