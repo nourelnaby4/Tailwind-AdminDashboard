@@ -18,32 +18,45 @@
     </a>
     <ul class="mt-4 slider-menu">
       <li class="mb-2 group active">
-        <a href="#" class="w-full flex items-center py-2 px-4 text-gray-400 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white">
+        <a href="#"
+          class="w-full flex items-center py-2 px-4 text-gray-400 hover:text-gray-100 rounded-md group-[.active]:bg-gray-800 group-[.active]:text-white">
           <i class="ri-home-2-line text-lg mr-3"></i>
           <span class="text-sm">Dashbord</span>
         </a>
       </li>
       <li class="mb-1 group">
-        <a href="#" class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md slider-dropdown-toggle">
+        <a href="#"
+          class="flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md slider-dropdown-toggle">
           <i class="ri-instance-line text-lg mr-3"></i>
           <span class="text-sm">Orders</span>
           <i class="ri-arrow-right-s-line ml-auto arrow"></i>
         </a>
-        <ul class="overflow-hidden max-h-0 opacity-0 transition-all duration-200 ease-in pl-7 mt-2 slider-dropdown-items">
-          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Active Order</a></li>
-          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Completed Order</a></li>
-          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Canceled Order</a></li>
+        <ul
+          class="overflow-hidden max-h-0 opacity-0 transition-all duration-200 ease-in pl-7 mt-2 slider-dropdown-items">
+          <li class="mb-3"><a href="#"
+              class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Active
+              Order</a></li>
+          <li class="mb-3"><a href="#"
+              class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Completed
+              Order</a></li>
+          <li class="mb-3"><a href="#"
+              class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Canceled
+              Order</a></li>
         </ul>
       </li>
-      
+
       <li class="mb-1 group">
-        <a href="#" class=" flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md slider-dropdown-toggle">
+        <a href="#"
+          class=" flex items-center py-2 px-4 text-gray-300 hover:bg-gray-950 rounded-md slider-dropdown-toggle">
           <i class="ri-flashlight-line text-lg mr-3"></i>
           <span class="text-sm">Services</span>
           <i class="ri-arrow-right-s-line ml-auto arrow"></i>
         </a>
-        <ul class="overflow-hidden max-h-0 opacity-0  transition-all duration-200 ease-in pl-7 mt-2 slider-dropdown-items">
-          <li class="mb-3"><a href="#" class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Manage Services</a></li>
+        <ul
+          class="overflow-hidden max-h-0 opacity-0  transition-all duration-200 ease-in pl-7 mt-2 slider-dropdown-items">
+          <li class="mb-3"><a href="#"
+              class="text-gray-400 text-sm flex items-center before:content-[''] before:w-1 before:h-1 before:rounded-full before:bg-gray-300 before:mr-3 hover:text-gray-100">Manage
+              Services</a></li>
         </ul>
       </li>
       <li class="mb-1 group">
@@ -54,6 +67,217 @@
       </li>
     </ul>
   </div>
+  <!-- end slider  -->
+
+  <!-- start: Main  -->
+  <main class="mx-auto ml-64">
+    <div class="flex items-center py-2 px-6 bg-white shadow-md shadow-gray-200">
+      <button class="text-gray-600 text-lg">
+        <i class="ri-menu-line"></i>
+      </button>
+      <ul class="flex items-center text-gray-400 ">
+        <li><a href="#" class="ml-3 text-gray-400 hover:text-gray-700">Dashboard</a></li>
+        <li class="mx-3"><a href="#">/</a></li>
+        <li class=""><a href="#" class="hover:text-gray-600 font-medium">Analytics</a></li>
+      </ul>
+
+
+      <ul class="ml-auto flex justify-between">
+        <!-- start: search  -->
+        <li class="relative">
+          <button type="button"
+            class="dropdown-menu px-2 text-gray-400 w-8 h-8 rounded flex items-center hover:text-gray-500 hover:shadow-2xl hover:cursor-pointer hover:bg-gray-100">
+            <i class="ri-search-line"></i>
+          </button>
+          <div class="dropdown-items hidden absolute top-12 right-1 p-3 bg-white rounded-md border border-gray-100">
+            <form action="">
+              <div class="mb-5 relative">
+                <input type="text"
+                  class="py-2 pr-4 pl-10 bg-gray-50 w-60 outline-none border border-gray-100 rounded-md text-sm focus:border-blue-300"
+                  placeholder="search..." />
+                <i class="absolute top-1/2 -translate-y-1/2 left-4 ri-search-line text-gray-400"></i>
+              </div>
+            </form>
+            <div class="w-full h-0 bg-gray-50 border border-gray-100"></div>
+            <div class="text-gray-400 py-3 ">
+              <h5 class="font-medium mb-4">Recently</h5>
+
+              <div class="space-y-1 max-h-48 overflow-y-auto">
+
+                <div class="flex gap-2 items-center py-2 text-[13px] hover:bg-gray-100">
+                  <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                  <div>
+                    <div class="text-gray-500 leading-tight hover:text-blue-300">Create landing page</div>
+                    <div>$345</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-2 items-center py-2 text-[13px] hover:bg-gray-100">
+                  <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                  <div>
+                    <div class="text-gray-500 leading-tight hover:text-blue-300">Create landing page</div>
+                    <div>$345</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-2 items-center py-2 text-[13px] hover:bg-gray-100">
+                  <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                  <div>
+                    <div class="text-gray-500 leading-tight hover:text-blue-300">Create landing page</div>
+                    <div>$345</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-2 items-center py-2 text-[13px] hover:bg-gray-100">
+                  <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                  <div>
+                    <div class="text-gray-500 leading-tight hover:text-blue-300">Create landing page</div>
+                    <div>$345</div>
+                  </div>
+                </div>
+
+                <div class="flex gap-2 items-center py-2 text-[13px] hover:bg-gray-100">
+                  <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                  <div>
+                    <div class="text-gray-500 leading-tight hover:text-blue-300">Create landing page</div>
+                    <div>$345</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </li>
+        <!-- end: search  -->
+
+        <!--strart: notifications  -->
+        <li class="relative">
+          <button type="button"
+            class="dropdown-menu px-2 text-gray-400 w-8 h-8 rounded flex items-center hover:text-gray-500 hover:cursor-pointer hover:bg-gray-100">
+            <i class="ri-notification-3-line"></i>
+          </button>
+          <div class="dropdown-items  hidden  absolute top-12 right-1 p-3 bg-white rounded-md border border-gray-100 ">
+            <div class=" flex items-center justify-between px-4 border-b border-b-gray-100 notification-tab">
+              <button
+                class=" text-gray-400 text-[13px] hover:text-gray-600  mr-4 pb-2 notification-menu">Notifications</button>
+              <button class=" text-gray-400 text-[13px] hover:text-gray-600  mr-4 pb-2 message-menu">Messages</button>
+            </div>
+            <div class="my-2">
+              <!-- notification items -->
+              <ul class="max-h-48 overflow-y-auto w-60 space-y-1 notification-items">
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New Order</div>
+                      <div>from ahmed</div>
+                    </div>
+                  </a>
+                </li>
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New Order</div>
+                      <div>from ahmed</div>
+                    </div>
+                  </a>
+                </li>
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New Order</div>
+                      <div>from ahmed</div>
+                    </div>
+                  </a>
+                </li>
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New Order</div>
+                      <div>from ahmed</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- end: notification items -->
+
+              <!-- start: messages-items -->
+              <ul class="max-h-48 overflow-y-auto w-60 space-y-1 message-items">
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New message</div>
+                      <div>from yasser</div>
+                    </div>
+                  </a>
+                </li>
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New message</div>
+                      <div>from mahmoud</div>
+                    </div>
+                  </a>
+                </li>
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New message</div>
+                      <div>from mahmoud</div>
+                    </div>
+                  </a>
+                </li>
+                <li class=" py-2 text-[13px] hover:bg-gray-100">
+                  <a href="#" class="flex gap-2 items-center px-2 rounded-md">
+                    <img src="https://placehold.co/32x32" class="rounded-md" alt="">
+                    <div class="text-gray-400">
+                      <div class=" leading-tight hover:text-blue-300">New message</div>
+                      <div>from mahmoud</div>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+              <!-- end: messages-items -->
+            </div>
+          </div>
+        </li>
+        <!-- end: notifications  -->
+
+        <li class="relative">
+          <button class="dropdown-menu">
+            <img src="https://placehold.co/32x32" class="rounded-md mx-2 flex items-center hover:cursor-pointer">
+          </button>
+          <ul class="dropdown-items hidden absolute top-12 right-1 bg-white border border-gray-100 w-36 py-3">
+            <li>
+              <a href="#" class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                <span class=" ml-4">Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                <span class=" ml-4">Settings</span>
+              </a>
+            </li>
+            <li>
+              <a href="#" class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                <span class=" ml-4">Logout</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+    </div>
+  </main>
+  <!-- end: Main  -->
+
+
 
   <script src="./dist/js/script.js"></script>
 </body>
