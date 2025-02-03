@@ -73,3 +73,27 @@ document.addEventListener("DOMContentLoaded", function () {
     notificationTab.classList.remove("active");
   });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const tabs = document.querySelectorAll(".order-tab button");
+  const tables = document.querySelectorAll("[data-tab-for='order']");
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", function () {
+      const selectedPage = this.getAttribute("data-tab-page");
+
+      // Remove 'active' class from all buttons
+      tabs.forEach(btn => btn.classList.remove("active", "text-gray-600"));
+      this.classList.add("active", "text-gray-600");
+
+      // Hide all tables and show only the selected one
+      tables.forEach(table => {
+        table.classList.add("hidden");
+        if (table.getAttribute("data-page") === selectedPage) {
+          table.classList.remove("hidden");
+        }
+      });
+    });
+  });
+});
