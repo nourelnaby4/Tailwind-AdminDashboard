@@ -71,6 +71,7 @@
 
   <!-- start: Main  -->
   <main class="mx-auto ml-64">
+    <!-- start: header  -->
     <div class="flex items-center py-2 px-6 bg-white shadow-md shadow-gray-200">
       <button class="text-gray-600 text-lg">
         <i class="ri-menu-line"></i>
@@ -255,18 +256,21 @@
           </button>
           <ul class="dropdown-items hidden absolute top-12 right-1 bg-white border border-gray-100 w-36 py-3">
             <li>
-              <a href="#" class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+              <a href="#"
+                class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
                 <span class=" ml-4">Profile</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+              <a href="#"
+                class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
                 <span class=" ml-4">Settings</span>
               </a>
             </li>
             <li>
-              <a href="#" class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
-                <span class=" ml-4">Logout</span>
+              <a href="#"
+                class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                <span class="ml-4">Logout</span>
               </a>
             </li>
           </ul>
@@ -274,10 +278,123 @@
       </ul>
 
     </div>
+    <!-- end: header  -->
+
+    <!-- start: content  -->
+    <div class="p-6 bg-gray-50">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- start:first card  -->
+        <div class="bg-white rounded-md border border-gray-50 p-6 shadow-md">
+          <div class="flex justify-between mb-8">
+            <div>
+              <div class="text-2xl font-medium mb-1">10</div>
+              <div class="text-sm  text-gray-400">Active Orders</div>
+            </div>
+            <div class="relative">
+              <button class="dropdown-menu">
+                <span class="ri-more-fill"></span>
+              </button>
+              <ul class="dropdown-items hidden absolute top-8 right-1 bg-white border border-gray-100 w-36 py-3">
+                <li>
+                  <a href="#"
+                    class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                    <span class=" ml-4">Profile</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                    <span class=" ml-4">Settings</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                    <span class="ml-4">Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex items-center ">
+            <div class="w-full bg-gray-200 rounded-full h-4">
+              <div class="h-full bg-blue-500 rounded-full p-1" style="width: 75%;">
+                <div class="w-2 h-2 rounded-full bg-white ml-auto"></div>
+              </div>
+            </div>
+            <span class="text-sm front-medium text-gray-600 ml-2">75%</span>
+          </div>
+        </div>
+        <!-- end:first card  -->
+
+        <!-- start:second card  -->
+        <div class="bg-white rounded-md border border-gray-50 p-6 shadow-md">
+          <div class="flex justify-between mb-6">
+            <div>
+              <div class="flex items-center mb-1">
+                <div class="text-2xl font-medium mb-1">324</div>
+                <div
+                  class="text-[12px] font-semibold bg-emerald-500/10 text-emerald-500 px-1 py-2 rounded-md mx-2 leading-none">
+                  +20%</div>
+              </div>
+              <div class="text-sm  text-gray-400">Visitors</div>
+            </div>
+
+          </div>
+          <div class="flex items-center">
+            <img src="https:placehold.co/32x32" alt="" class="w-8 h-8 rounded-full object-cover  -ml-3 ">
+            <img src="https:placehold.co/32x32" alt="" class="w-8 h-8 rounded-full object-cover block -ml-3 ">
+            <img src="https:placehold.co/32x32" alt="" class="w-8 h-8 rounded-full object-cover block -ml-3 ">
+            <img src="https:placehold.co/32x32" alt="" class="w-8 h-8 rounded-full object-cover block -ml-3 ">
+            <img src="https:placehold.co/32x32" alt="" class="w-8 h-8 rounded-full object-cover block -ml-3 ">
+            <img src="https:placehold.co/32x32" alt="" class="w-8 h-8 rounded-full object-cover block -ml-3 ">
+            <img src="https:placehold.co/32x32" alt="" class="w-8 h-8 rounded-full object-cover -ml-3 ">
+          </div>
+        </div>
+        <!-- end:second card  -->
+
+        <!-- start:third card  -->
+        <div class="bg-white rounded-md border border-gray-50 p-6 shadow-md">
+          <div class="flex justify-between mb-7">
+            <div>
+              <div class="text-2xl font-medium mb-1"><span
+                  class="text-base text-gray-400 font-normal align-top">&dollar;</span>2,345</div>
+              <div class="text-sm  text-gray-400">Active Orders</div>
+            </div>
+            <div class="relative">
+              <button class="dropdown-menu">
+                <span class="ri-more-fill"></span>
+              </button>
+              <ul class="dropdown-items hidden absolute top-8 right-1 bg-white border border-gray-100 w-36 py-3">
+                <li>
+                  <a href="#"
+                    class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                    <span class=" ml-4">Profile</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                    <span class=" ml-4">Settings</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#"
+                    class="flex items-center text-[13px] py-1.5 text-gray-600 hover:text-blue-500 hover:bg-gray-50">
+                    <span class="ml-4">Logout</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <a href="#" class="text-blue-400 font-medium text-sm hover:text-blue-600">view details</a>
+        </div>
+        <!-- end:third card  -->
+      </div>
+    </div>
+    <!-- end: content -->
   </main>
   <!-- end: Main  -->
-
-
 
   <script src="./dist/js/script.js"></script>
 </body>

@@ -1,39 +1,48 @@
 document.querySelectorAll('.slider-dropdown-toggle').forEach(item => {
-    item.addEventListener('click', () => {
-      const dropdown = item.closest('li').querySelector('.slider-dropdown-items');
-    
-      if (dropdown.style.maxHeight) {
-        dropdown.style.maxHeight = null;
-        dropdown.style.opacity = '0';
-      } else {
-        dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
-        dropdown.style.opacity = '1';
-      }
+  item.addEventListener('click', () => {
+    const dropdown = item.closest('li').querySelector('.slider-dropdown-items');
 
-      const arrow = item.closest('li').querySelector('.arrow');
-      if (arrow.style.transform === 'rotate(90deg)') {
-        arrow.style.transform = 'rotate(0deg)';
-      } else {
-        arrow.style.transform = 'rotate(90deg)';
-      }
-    });
-  });
-  
-  document.querySelectorAll('.dropdown-menu').forEach(button => {
-    button.addEventListener('click', () => {
-      const dropdown = button.nextElementSibling; // Selects the next sibling (dropdown)
-      if (dropdown) {
-        dropdown.classList.toggle('hidden'); // Toggle the 'hidden' class
-      }
-    });
-  });
-  
-  // Close dropdown when clicking anywhere outside
-window.addEventListener('click', (event) => {
-  document.querySelectorAll('.dropdown-items').forEach(dropdown => {
-    if (!dropdown.classList.contains('hidden') && !dropdown.closest('li').contains(event.target)) {
-      dropdown.classList.add('hidden');
+    if (dropdown.style.maxHeight) {
+      dropdown.style.maxHeight = null;
+      dropdown.style.opacity = '0';
+    } else {
+      dropdown.style.maxHeight = dropdown.scrollHeight + 'px';
+      dropdown.style.opacity = '1';
     }
+
+    const arrow = item.closest('li').querySelector('.arrow');
+    if (arrow.style.transform === 'rotate(90deg)') {
+      arrow.style.transform = 'rotate(0deg)';
+    } else {
+      arrow.style.transform = 'rotate(90deg)';
+    }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  document.querySelectorAll('.dropdown-menu').forEach(button => {
+    button.addEventListener('click', (event) => {
+      event.stopPropagation(); // Prevents event bubbling
+
+      // Close all other dropdowns before opening the clicked one
+      document.querySelectorAll('.dropdown-items').forEach(dropdown => {
+        if (!dropdown.classList.contains('hidden')) {
+          dropdown.classList.add('hidden');
+        }
+      });
+
+      const dropdown = button.nextElementSibling;
+      if (dropdown && dropdown.classList.contains('dropdown-items')) {
+        dropdown.classList.toggle('hidden');
+      }
+    });
+  });
+
+  // Close dropdown when clicking anywhere outside
+  window.addEventListener('click', () => {
+    document.querySelectorAll('.dropdown-items').forEach(dropdown => {
+      dropdown.classList.add('hidden');
+    });
   });
 });
 
