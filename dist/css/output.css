@@ -559,6 +559,12 @@
   .left-4 {
     left: calc(var(--spacing) * 4);
   }
+  .z-0 {
+    z-index: 0;
+  }
+  .z-\[9999\] {
+    z-index: 9999;
+  }
   .mx-2 {
     margin-inline: calc(var(--spacing) * 2);
   }
@@ -685,6 +691,9 @@
   .w-64 {
     width: calc(var(--spacing) * 64);
   }
+  .w-\[85\%\] {
+    width: 85%;
+  }
   .w-full {
     width: 100%;
   }
@@ -783,9 +792,6 @@
   .border-b-gray-100 {
     border-bottom-color: var(--color-gray-100);
   }
-  .border-b-gray-200 {
-    border-bottom-color: var(--color-gray-200);
-  }
   .bg-blue-500 {
     background-color: var(--color-blue-500);
   }
@@ -798,17 +804,26 @@
   .bg-gray-50 {
     background-color: var(--color-gray-50);
   }
+  .bg-gray-100 {
+    background-color: var(--color-gray-100);
+  }
   .bg-gray-200 {
     background-color: var(--color-gray-200);
   }
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
+  .bg-red-500 {
+    background-color: var(--color-red-500);
+  }
   .bg-red-500\/10 {
     background-color: color-mix(in oklab, var(--color-red-500) 10%, transparent);
   }
   .bg-white {
     background-color: var(--color-white);
+  }
+  .bg-yellow-500 {
+    background-color: var(--color-yellow-500);
   }
   .bg-yellow-500\/10 {
     background-color: color-mix(in oklab, var(--color-yellow-500) 10%, transparent);
@@ -888,10 +903,6 @@
   .text-sm {
     font-size: var(--text-sm);
     line-height: var(--tw-leading, var(--text-sm--line-height));
-  }
-  .text-xl {
-    font-size: var(--text-xl);
-    line-height: var(--tw-leading, var(--text-xl--line-height));
   }
   .text-\[12px\] {
     font-size: 12px;
@@ -1137,8 +1148,43 @@
       border-color: var(--color-blue-300);
     }
   }
+  .focus\:border-blue-500 {
+    &:focus {
+      border-color: var(--color-blue-500);
+    }
+  }
+  .md\:mx-auto {
+    @media (width >= 48rem) {
+      margin-inline: auto;
+    }
+  }
   .md\:grid-cols-2 {
     @media (width >= 48rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+  .lg\:ml-64 {
+    @media (width >= 64rem) {
+      margin-left: calc(var(--spacing) * 64);
+    }
+  }
+  .lg\:block {
+    @media (width >= 64rem) {
+      display: block;
+    }
+  }
+  .lg\:w-64 {
+    @media (width >= 64rem) {
+      width: calc(var(--spacing) * 64);
+    }
+  }
+  .lg\:w-full {
+    @media (width >= 64rem) {
+      width: 100%;
+    }
+  }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
