@@ -97,3 +97,66 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// sidebar
+const mobileNav = document.querySelector('.mnav');
+const main = document.querySelector('.main_body');
+const closeBtn = document.querySelector('.mnav__close-btn');
+
+const navOpenedClass = 'left-0';
+const navClosedClass = '-left-[300px]';
+const mainClosedClass = 'ml-0';
+const mainOpendClass = 'ml-64';
+
+closeBtn.addEventListener('click', () => {
+  mobileNav.classList.toggle(navOpenedClass);
+  mobileNav.classList.toggle(navClosedClass);
+  main.classList.toggle(mainClosedClass);
+  main.classList.toggle(mainOpendClass);
+});
+
+
+// start: chart
+const order_chart = document.getElementById('order-chart');
+new Chart(order_chart, {
+  type: 'line',
+  data: {
+    labels: generateDays(7),
+    datasets: [{
+      label: '# Active',
+      data: generatRandomData(7),
+      borderWidth: 1,
+      fill:true,
+      pointBackgroundColor: 'rgb(16,185,129)',
+      borderColor : 'rgb(16,185,129)',
+      backgroundColor: 'rgb(16 185 129 /.1)',
+      tension: .2
+    }]
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+
+function generateDays(n){
+const data = [];
+  for(let i = 0; i < n; i++){
+    const date = new Date();
+    date.setDate(date.getDate() - i);
+    data.push(date.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}));
+  }
+  return data;
+}
+
+function generatRandomData(n){
+  const data = [];
+  for(let i = 0; i < n; i++){
+    data.push(Math.round(Math.random() * 10));
+    }
+    return data;
+  }
+// end: chart
