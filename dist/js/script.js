@@ -122,16 +122,38 @@ new Chart(order_chart, {
   type: 'line',
   data: {
     labels: generateDays(7),
-    datasets: [{
-      label: '# Active',
-      data: generatRandomData(7),
-      borderWidth: 1,
-      fill:true,
-      pointBackgroundColor: 'rgb(16,185,129)',
-      borderColor : 'rgb(16,185,129)',
-      backgroundColor: 'rgb(16 185 129 /.1)',
-      tension: .2
-    }]
+    datasets: [
+      {
+        label: 'Active',
+        data: generatRandomData(7),
+        borderWidth: 1,
+        fill: true,
+        pointBackgroundColor: 'rgb(59,130,246)',
+        borderColor: 'rgb(59,130,246)',
+        backgroundColor: 'rgb(59 130 246 / .05)',
+        tension: .2
+      },
+      {
+        label: 'Completed',
+        data: generatRandomData(7),
+        borderWidth: 1,
+        fill: true,
+        pointBackgroundColor: 'rgb(16,185,129)',
+        borderColor: 'rgb(16,185,129)',
+        backgroundColor: 'rgb(16 185 129 /.05)',
+        tension: .2
+      },
+      {
+        label: 'Canceled',
+        data: generatRandomData(7),
+        borderWidth: 1,
+        fill: true,
+        pointBackgroundColor: 'rgb(244,63,94)',
+        borderColor: 'rgb(244,63,94)',
+        backgroundColor: 'rgb(244 63 94 / .05)',
+        tension: .2
+      },
+    ]
   },
   options: {
     scales: {
@@ -142,21 +164,21 @@ new Chart(order_chart, {
   }
 });
 
-function generateDays(n){
-const data = [];
-  for(let i = 0; i < n; i++){
+function generateDays(n) {
+  const data = [];
+  for (let i = 0; i < n; i++) {
     const date = new Date();
     date.setDate(date.getDate() - i);
-    data.push(date.toLocaleDateString('en-US', {month: 'short', day: 'numeric'}));
+    data.push(date.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }));
   }
   return data;
 }
 
-function generatRandomData(n){
+function generatRandomData(n) {
   const data = [];
-  for(let i = 0; i < n; i++){
+  for (let i = 0; i < n; i++) {
     data.push(Math.round(Math.random() * 10));
-    }
-    return data;
   }
+  return data;
+}
 // end: chart

@@ -709,6 +709,12 @@
   .w-full {
     width: 100%;
   }
+  .min-w-\[300px\] {
+    min-width: 300px;
+  }
+  .min-w-\[400px\] {
+    min-width: 400px;
+  }
   .min-w-\[540px\] {
     min-width: 540px;
   }
@@ -838,6 +844,9 @@
   .bg-gray-900 {
     background-color: var(--color-gray-900);
   }
+  .bg-orange-500\/10 {
+    background-color: color-mix(in oklab, var(--color-orange-500) 10%, transparent);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -939,6 +948,9 @@
     font-size: var(--text-xl);
     line-height: var(--tw-leading, var(--text-xl--line-height));
   }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
   .text-\[12px\] {
     font-size: 12px;
   }
@@ -999,6 +1011,9 @@
   }
   .text-gray-800 {
     color: var(--color-gray-800);
+  }
+  .text-orange-500 {
+    color: var(--color-orange-500);
   }
   .text-red-500 {
     color: var(--color-red-500);
