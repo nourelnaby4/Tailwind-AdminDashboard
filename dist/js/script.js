@@ -1,3 +1,69 @@
+// Sidebar
+const mobileNav = document.querySelector('.mnav');
+const main = document.querySelector('.main_body');
+const closeBtn = document.querySelector('.mnav__close-btn');
+const sideCloseBtn = document.querySelector('.sidebar__close-btn');
+
+const navClasses = {
+  open: 'left-0',
+  closed: '-left-[300px]'
+};
+
+const mainClasses = {
+  open: 'ml-64',
+  closed: 'ml-0'
+};
+
+// Toggle sidebar visibility
+function toggleSidebar() {
+  mobileNav.classList.toggle(navClasses.open);
+  mobileNav.classList.toggle(navClasses.closed);
+  main.classList.toggle(mainClasses.open);
+  main.classList.toggle(mainClasses.closed);
+
+  if (window.innerWidth < 1024) {
+    main.classList.add(mainClasses.closed);
+    main.classList.remove(mainClasses.open);
+  }
+}
+
+// Adjust sidebar based on screen resize
+function handleResize() {
+  if (window.innerWidth >= 1024) {
+    main.classList.add(mainClasses.open);
+    main.classList.remove(mainClasses.closed);
+    mobileNav.classList.add(navClasses.open);
+    mobileNav.classList.remove(navClasses.closed);
+  } else {
+    main.classList.add(mainClasses.closed);
+    main.classList.remove(mainClasses.open);
+    mobileNav.classList.add(navClasses.closed);
+    mobileNav.classList.remove(navClasses.open);
+  }
+}
+
+// Initialize sidebar state on page load
+function initializeSidebar() {
+  if (window.innerWidth >= 1024) {
+    main.classList.add(mainClasses.open);
+    main.classList.remove(mainClasses.closed);
+    mobileNav.classList.add(navClasses.open);
+    mobileNav.classList.remove(navClasses.closed);
+  } else {
+    main.classList.add(mainClasses.closed);
+    main.classList.remove(mainClasses.open);
+    mobileNav.classList.add(navClasses.closed);
+    mobileNav.classList.remove(navClasses.open);
+  }
+}
+
+// Event Listeners
+closeBtn.addEventListener('click', toggleSidebar);
+sideCloseBtn.addEventListener('click', toggleSidebar);
+document.addEventListener("DOMContentLoaded", initializeSidebar);
+window.addEventListener('resize', handleResize);
+
+
 document.querySelectorAll('.slider-dropdown-toggle').forEach(item => {
   item.addEventListener('click', () => {
     const dropdown = item.closest('li').querySelector('.slider-dropdown-items');
@@ -98,54 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// Sidebar
-const mobileNav = document.querySelector('.mnav');
-const main = document.querySelector('.main_body');
-const closeBtn = document.querySelector('.mnav__close-btn');
-const sideCloseBtn = document.querySelector('.sidebar__close-btn');
-
-const navClasses = {
-  open: 'left-0',
-  closed: '-left-[300px]'
-};
-
-const mainClasses = {
-  open: 'ml-64',
-  closed: 'ml-0'
-};
-
-// Toggle sidebar visibility
-function toggleSidebar() {
-  mobileNav.classList.toggle(navClasses.open);
-  mobileNav.classList.toggle(navClasses.closed);
-  main.classList.toggle(mainClasses.open);
-  main.classList.toggle(mainClasses.closed);
-
-  if (window.innerWidth < 1024) {
-    main.classList.add(mainClasses.closed);
-    main.classList.remove(mainClasses.open);
-  }
-}
-
-// Adjust sidebar based on screen resize
-function handleResize() {
-  if (window.innerWidth >= 1024) {
-    main.classList.add(mainClasses.open);
-    main.classList.remove(mainClasses.closed);
-    mobileNav.classList.add(navClasses.open);
-    mobileNav.classList.remove(navClasses.closed);
-  } else {
-    main.classList.add(mainClasses.closed);
-    main.classList.remove(mainClasses.open);
-    mobileNav.classList.add(navClasses.closed);
-    mobileNav.classList.remove(navClasses.open);
-  }
-}
-
-// Event Listeners
-closeBtn.addEventListener('click', toggleSidebar);
-sideCloseBtn.addEventListener('click', toggleSidebar);
-window.addEventListener('resize', handleResize);
 
 
 // start: chart
