@@ -98,22 +98,54 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-// sidebar
+// Sidebar
 const mobileNav = document.querySelector('.mnav');
 const main = document.querySelector('.main_body');
 const closeBtn = document.querySelector('.mnav__close-btn');
+const sideCloseBtn = document.querySelector('.sidebar__close-btn');
 
-const navOpenedClass = 'left-0';
-const navClosedClass = '-left-[300px]';
-const mainClosedClass = 'ml-0';
-const mainOpendClass = 'ml-64';
+const navClasses = {
+  open: 'left-0',
+  closed: '-left-[300px]'
+};
 
-closeBtn.addEventListener('click', () => {
-  mobileNav.classList.toggle(navOpenedClass);
-  mobileNav.classList.toggle(navClosedClass);
-  main.classList.toggle(mainClosedClass);
-  main.classList.toggle(mainOpendClass);
-});
+const mainClasses = {
+  open: 'ml-64',
+  closed: 'ml-0'
+};
+
+// Toggle sidebar visibility
+function toggleSidebar() {
+  mobileNav.classList.toggle(navClasses.open);
+  mobileNav.classList.toggle(navClasses.closed);
+  main.classList.toggle(mainClasses.open);
+  main.classList.toggle(mainClasses.closed);
+
+  if (window.innerWidth < 1024) {
+    main.classList.add(mainClasses.closed);
+    main.classList.remove(mainClasses.open);
+  }
+}
+
+// Adjust sidebar based on screen resize
+function handleResize() {
+  if (window.innerWidth >= 1024) {
+    main.classList.add(mainClasses.open);
+    main.classList.remove(mainClasses.closed);
+    mobileNav.classList.add(navClasses.open);
+    mobileNav.classList.remove(navClasses.closed);
+  } else {
+    main.classList.add(mainClasses.closed);
+    main.classList.remove(mainClasses.open);
+    mobileNav.classList.add(navClasses.closed);
+    mobileNav.classList.remove(navClasses.open);
+  }
+}
+
+// Event Listeners
+closeBtn.addEventListener('click', toggleSidebar);
+sideCloseBtn.addEventListener('click', toggleSidebar);
+window.addEventListener('resize', handleResize);
 
 
 // start: chart
@@ -182,3 +214,5 @@ function generatRandomData(n) {
   return data;
 }
 // end: chart
+
+
